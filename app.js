@@ -20,6 +20,10 @@ app.get('/bye', (req, res) => {
     res.send("Bye World");
 });
 
+app.get('/new', (req, res) => {
+    res.send("New route");
+});
+
 app.listen(port, () => {
     console.log(`SERVER RUNNING IN http://localhost:${port}.`);
 });
