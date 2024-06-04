@@ -21,6 +21,10 @@ app.get('/new2', (req, res) => {
     res.send("New route 2");
 });
 
+app.get('/alumno', (req, res) => {
+    res.send("Hola soy Jose Miguel Mendoza Gomez");
+});
+
 app.listen(port, () => {
     console.log(`SERVER RUNNING IN http://localhost:${port}.`);
 });
