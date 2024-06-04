@@ -17,6 +17,10 @@ app.get('/new', (req, res) => {
     res.send("New route");
 });
 
+app.get('/new2', (req, res) => {
+    res.send("New route 2");
+});
+
 app.listen(port, () => {
     console.log(`SERVER RUNNING IN http://localhost:${port}.`);
 });
