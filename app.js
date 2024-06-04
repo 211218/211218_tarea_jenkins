@@ -21,7 +21,7 @@ app.get('/new2', (req, res) => {
     res.send("New route 2");
 });
 
-app.get('/alumno', (req, res) => {
+app.get('/nombre', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
 
