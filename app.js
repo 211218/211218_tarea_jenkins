@@ -9,10 +9,6 @@ app.use(cors());
 const port = process.env.PORT || 3000;
 
 
-app.get('/jenkins', (req, res) => {
-    res.send("Hello Jenkins");
-});
-
 app.get('/test', (req, res) => {
     res.send("Hello World");
 });
