@@ -13,6 +13,9 @@ app.get('/jenkins', (req, res) => {
     res.send("Hello Jenkins");
 });
 
+app.get('/test', (req, res) => {
+    res.send("Hello World");
+};
 
 app.get('/new', (req, res) => {
     res.send("New route");
