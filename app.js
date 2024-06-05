@@ -13,12 +13,6 @@ app.get('/test', (req, res) => {
     res.send("Hello World");
 });
 
-app.get('/new', (req, res) => {
-    res.send("New route");
-});
-
-
-
 app.get('/nombre', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
