@@ -25,6 +25,10 @@ app.get('/nombre', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
 
+app.get('/nombre', (req, res) => {
+    res.send("Hola soy Jose Miguel Mendoza Gomez");
+});
+
 app.listen(port, () => {
     console.log(`SERVER RUNNING IN http://localhost:${port}.`);
 });
