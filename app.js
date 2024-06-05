@@ -25,7 +25,10 @@ app.get('/nombre', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
 
-app.get('/names', (req, res) => {
+app.get('/namess', (req, res) => {
+    res.send("Hola soy Jose Miguel Mendoza Gomezz");
+});
+app.get('/nams', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomezz");
 });
 
