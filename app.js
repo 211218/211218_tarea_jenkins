@@ -13,7 +13,7 @@ app.get('/test', (req, res) => {
     res.send("Hello World");
 });
 
-app.get('/nombre', (req, res) => {
+app.get('/nombree', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
 
