@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/211218/211218_tarea_jenkins.git', branch: 'master'
+                git url: 'https://github.com/211218/211218_tarea_jenkins.git/', branch: 'master'
             }
         }
         stage('Build') {
