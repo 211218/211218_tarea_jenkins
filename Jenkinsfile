@@ -14,14 +14,16 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("${env.DOCKER_IMAGE}:${env.BUILD_ID}")
+                    // Construir la imagen Docker con sudo
+                    sh 'sudo docker build -t ${env.DOCKER_IMAGE}:${env.BUILD_ID} .'
                 }
             }
         }
         stage('Run') {
             steps {
                 script {
-                    dockerImage.run("-d -p 3000:3000")
+                    // Ejecutar el contenedor Docker con sudo
+                    sh 'sudo docker run -d -p 3000:3000 ${env.DOCKER_IMAGE}:${env.BUILD_ID}'
                 }
             }
         }
