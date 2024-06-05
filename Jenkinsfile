@@ -8,20 +8,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/211218/211218_tarea_jenkins.git', branch: 'master'
+                git url: 'https://github.com/211218/211218_tarea_jenkins.git/', branch: 'master'
             }
         }
         stage('Build') {
             steps {
                 script {
-                    sudo sh "docker build -t ${env.DOCKER_IMAGE}:${env.BUILD_ID} ."
+                    sh "sudo docker build -t ${env.DOCKER_IMAGE}:${env.BUILD_ID} ."
                 }
             }
         }
         stage('Run') {
             steps {
                 script {
-                    sudo sh "docker run -d -p 3000:3000 ${env.DOCKER_IMAGE}:${env.BUILD_ID}"
+                    sh "sudo docker run -d -p 3000:3000 ${env.DOCKER_IMAGE}:${env.BUILD_ID}"
                 }
             }
         }
