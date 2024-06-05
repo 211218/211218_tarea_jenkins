@@ -26,7 +26,7 @@ app.get('/nombre', (req, res) => {
 });
 
 app.get('/myname', (req, res) => {
-    res.send("Hola soy Jose Miguel Mendoza Gomez");
+    res.send("Hola soy Jose Miguel Mendoza Gomezz");
 });
 
 app.listen(port, () => {
