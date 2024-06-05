@@ -13,16 +13,16 @@ app.get('/test', (req, res) => {
     res.send("Hello World");
 });
 
-app.get('/nombree', (req, res) => {
+app.get('/nombre', (req, res) => {
     res.send("Hola soy Jose Miguel Mendoza Gomez");
 });
 
-app.get('/mynameiseasdasds', (req, res) => {
-    res.send("Hola soy Jose Miguel Mendoza Gomezz");
+app.get('/welcome', (req, res) => {
+    res.send("Hola Bienvenido soy Jose Miguel Mendoza Gomez");
 });
 
 app.get('/hola', (req, res) => {
-    res.send("Hola soy Jose Miguel Mendoza Gomezz");
+    res.send("Hola");
 });
 
 app.listen(port, () => {
