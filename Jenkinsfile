@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.image(DOCKER_IMAGE).push('latest')
+                    docker.image(DOCKER_IMAGE).run('-p 3000:3000')
                 }
             }
         }
