@@ -17,9 +17,9 @@ pipeline {
             steps {
                 script {
                     docker.image(DOCKER_IMAGE).inside {
-                        sh 'npm install'
-                        sh 'npm install -g mocha'
-                        sh 'npm test'
+                        sh 'sudo npm install'
+                        sh 'sudo npm install -g mocha'
+                        sh 'sudo npm test'
                     }
                 }
             }
