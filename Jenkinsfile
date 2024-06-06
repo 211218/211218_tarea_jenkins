@@ -9,9 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.withServer('tcp://localhost:2375') {
-                        docker.build(DOCKER_IMAGE)
-                    }
+                    docker.build(DOCKER_IMAGE)
                 }
             }
         }
