@@ -28,8 +28,7 @@ pipeline {
         stage('Build and Test') {
             steps {
                 script {
-                    // Build Docker image
-                    sh 'docker build -t soa-deploy:latest .'
+                    sh 'docker build -t container-act-3:latest .'
                 }
             }
         }
@@ -38,13 +37,11 @@ pipeline {
     post {
         always {
             script {
-                // Check if the container exists and remove it if necessary
-                def containerExists = sh(script: 'docker ps -q -f name=soa-deploy-test', returnStatus: true) == 0
+                def containerExists = sh(script: 'docker ps -q -f name=container-act-3', returnStatus: true) == 0
                 if (containerExists) {
-                    sh 'docker rm -f soa-deploy-test'
+                    sh 'docker rm -f container-act-3'
                 }
-                // Run the new container
-                sh 'docker run -d -p 3000:3000 --name soa-deploy-test soa-deploy:latest'
+                sh 'docker run -d -p 3000:3000 --name container-act-3 container-act-3:latest'
             }
         }
         failure {
