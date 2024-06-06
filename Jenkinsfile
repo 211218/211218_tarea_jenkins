@@ -19,7 +19,7 @@ pipeline {
                     docker.image(DOCKER_IMAGE).inside {
                         sh 'npm install'
                         sh 'chmod +x ./node_modules/.bin/mocha'  // Agrega esta línea para otorgar permisos
-                        sh 'npm test'
+                        sh 'npm run test'
                     }
                 }
             }
