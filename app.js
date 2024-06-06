@@ -1,30 +1,17 @@
 const express = require('express');
-const cors = require('cors');
-
 const app = express();
 
+// Middleware
 app.use(express.json());
-app.use(cors());
-
-const port = process.env.PORT || 3000;
 
 
-app.get('/test', (req, res) => {
-    res.send("Hello World");
+app.get('/api/v1/welcome', (req, res) => {
+  res.status(200).json({ message: 'Welcome!' });
 });
 
-app.get('/nombre', (req, res) => {
-    res.send("Hola soy Jose Miguel Mendoza Gomez");
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
 
-app.get('/welcome', (req, res) => {
-    res.send("Hola Bienvenido soy Jose Miguel Mendoza Gomez");
-});
-
-app.get('/hola', (req, res) => {
-    res.send("Hola");
-});
-
-app.listen(port, () => {
-    console.log(`SERVER RUNNING IN http://localhost:${port}.`);
-});
+module.exports = app;

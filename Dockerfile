@@ -11,4 +11,4 @@ RUN chmod +x ./node_modules/.bin/mocha
 COPY . .
 
 EXPOSE 3000
-CMD ["npm", "test"]
+CMD ["npm", "app.js"]
