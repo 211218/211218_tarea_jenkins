@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
 
-// Middleware
 app.use(express.json());
 
 
 app.get('/api/v1/welcome', (req, res) => {
-  res.status(200).json({ message: 'Welcome!' });
+  res.status(200).json({ message: 'Welcome im migue!' });
 });
 
 const PORT = 3000;

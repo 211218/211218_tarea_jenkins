@@ -9,7 +9,7 @@ describe('GET /api/v1/welcome', () => {
       .expect(200)
       .expect((res) => {
         if (!('message' in res.body)) throw new Error("Missing 'message' key");
-        if (res.body.message !== 'Welcome!') throw new Error(`Unexpected message: ${res.body.message}`);
+        if (res.body.message !== 'Welcome im migue!') throw new Error(`Unexpected message: ${res.body.message}`);
       })
       .end(done);
   });
