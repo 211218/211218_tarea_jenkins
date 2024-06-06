@@ -27,9 +27,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    def container = docker.image(DOCKER_IMAGE).run('-d -p 3000:3000')
-                    echo "Container ID: ${container.id}"
-                    sh "docker ps -a" // List all containers to check if it's runnings
+                    docker.image(DOCKER_IMAGE).inside {
+                        sh 'docker run -d -p 3000:3000 --name node-hello-world node-hello-world'
+                    }
                 }
             }
         }
