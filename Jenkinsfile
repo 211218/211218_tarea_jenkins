@@ -49,7 +49,7 @@ pipeline {
     post {
         success {
             script {
-                // Detener y eliminar cualquier contenedor en ejecución con el mismo nombre
+                // Detener y eliminar cualquier contenedor en ejecución con el mismo nombres
                 def containerRunning = sh(script: 'docker ps -q -f name=soa-deploy-test', returnStdout: true).trim()
                 if (containerRunning != "") {
                     sh "docker stop $containerRunning"
