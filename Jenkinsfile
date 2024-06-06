@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'node-hello-world'
+        DOCKER_PATH = '/usr/bin' 
     }
 
     stages {
