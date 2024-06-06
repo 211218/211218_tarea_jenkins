@@ -18,7 +18,7 @@ pipeline {
                 script {
                     docker.image(DOCKER_IMAGE).inside {
                         sh 'npm install'
-                        sh 'chmod +x ./node_modules/.bin/mocha'  // Agrega esta línea para otorgar permisos
+                        sh 'chmod +x ./node_modules/.bin/mocha'
                         sh 'npm run test'
                     }
                 }
@@ -29,6 +29,7 @@ pipeline {
                 script {
                     def container = docker.image(DOCKER_IMAGE).run('-d -p 3000:3000')
                     echo "Container ID: ${container.id}"
+                    sh "docker ps -a" // List all containers to check if it's running
                 }
             }
         }
