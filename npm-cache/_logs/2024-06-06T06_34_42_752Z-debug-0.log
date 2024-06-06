@@ -1,0 +1,190 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\andro\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.7.0
+2 info using node@v20.12.2
+3 silly config:load:file:C:\Users\andro\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config:load:file:C:\Users\andro\Documents\BACKEND_NODEJS\.npmrc
+5 silly config:load:file:C:\Users\andro\.npmrc
+6 silly config:load:file:C:\Users\andro\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install mocha
+8 verbose argv "install" "mocha" "--save-dev"
+9 verbose logfile logs-max:10 dir:C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T06_34_42_752Z-
+10 verbose logfile C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T06_34_42_752Z-debug-0.log
+11 silly logfile start cleaning logs, removing 2 files
+12 silly idealTree buildDeps
+13 silly fetch manifest mocha@*
+14 silly logfile done cleaning log files
+15 http fetch GET 200 https://registry.npmjs.org/mocha 1770ms (cache miss)
+16 silly placeDep ROOT mocha@10.4.0 OK for: backend_nodejs@1.0.0 want: *
+17 silly fetch manifest ansi-colors@4.1.1
+18 silly fetch manifest browser-stdout@1.3.1
+19 silly fetch manifest chokidar@3.5.3
+20 silly fetch manifest debug@4.3.4
+21 silly fetch manifest diff@5.0.0
+22 silly fetch manifest escape-string-regexp@4.0.0
+23 silly fetch manifest find-up@5.0.0
+24 silly fetch manifest glob@8.1.0
+25 silly fetch manifest he@1.2.0
+26 silly fetch manifest js-yaml@4.1.0
+27 silly fetch manifest log-symbols@4.1.0
+28 silly fetch manifest minimatch@5.0.1
+29 silly fetch manifest ms@2.1.3
+30 silly fetch manifest serialize-javascript@6.0.0
+31 silly fetch manifest strip-json-comments@3.1.1
+32 http fetch GET 200 https://registry.npmjs.org/ms 28ms (cache hit)
+33 silly fetch manifest supports-color@8.1.1
+34 http fetch GET 200 https://registry.npmjs.org/debug 46ms (cache hit)
+35 silly fetch manifest workerpool@6.2.1
+36 http fetch GET 200 https://registry.npmjs.org/ansi-colors 259ms (cache miss)
+37 silly fetch manifest yargs@16.2.0
+38 http fetch GET 200 https://registry.npmjs.org/strip-json-comments 525ms (cache miss)
+39 silly fetch manifest yargs-parser@20.2.4
+40 http fetch GET 200 https://registry.npmjs.org/browser-stdout 580ms (cache miss)
+41 silly fetch manifest yargs-unparser@2.0.0
+42 http fetch GET 200 https://registry.npmjs.org/escape-string-regexp 579ms (cache miss)
+43 http fetch GET 200 https://registry.npmjs.org/log-symbols 585ms (cache miss)
+44 http fetch GET 200 https://registry.npmjs.org/diff 653ms (cache miss)
+45 http fetch GET 200 https://registry.npmjs.org/he 675ms (cache miss)
+46 http fetch GET 200 https://registry.npmjs.org/yargs-unparser 268ms (cache miss)
+47 http fetch GET 200 https://registry.npmjs.org/find-up 847ms (cache miss)
+48 http fetch GET 200 https://registry.npmjs.org/supports-color 1057ms (cache miss)
+49 http fetch GET 200 https://registry.npmjs.org/serialize-javascript 1963ms (cache miss)
+50 http fetch GET 200 https://registry.npmjs.org/chokidar 2044ms (cache miss)
+51 http fetch GET 200 https://registry.npmjs.org/minimatch 2175ms (cache miss)
+52 http fetch GET 200 https://registry.npmjs.org/js-yaml 2241ms (cache miss)
+53 http fetch GET 200 https://registry.npmjs.org/yargs 2053ms (cache miss)
+54 http fetch GET 200 https://registry.npmjs.org/glob 2435ms (cache miss)
+55 http fetch GET 200 https://registry.npmjs.org/yargs-parser 1925ms (cache miss)
+56 http fetch GET 200 https://registry.npmjs.org/workerpool 2608ms (cache miss)
+57 silly placeDep ROOT ansi-colors@4.1.1 OK for: mocha@10.4.0 want: 4.1.1
+58 silly placeDep ROOT browser-stdout@1.3.1 OK for: mocha@10.4.0 want: 1.3.1
+59 silly placeDep ROOT chokidar@3.5.3 OK for: mocha@10.4.0 want: 3.5.3
+60 silly placeDep node_modules/mocha debug@4.3.4 OK for: mocha@10.4.0 want: 4.3.4
+61 silly placeDep ROOT diff@5.0.0 OK for: mocha@10.4.0 want: 5.0.0
+62 silly placeDep ROOT escape-string-regexp@4.0.0 OK for: mocha@10.4.0 want: 4.0.0
+63 silly placeDep ROOT find-up@5.0.0 OK for: mocha@10.4.0 want: 5.0.0
+64 silly placeDep ROOT glob@8.1.0 OK for: mocha@10.4.0 want: 8.1.0
+65 silly placeDep ROOT he@1.2.0 OK for: mocha@10.4.0 want: 1.2.0
+66 silly placeDep ROOT js-yaml@4.1.0 OK for: mocha@10.4.0 want: 4.1.0
+67 silly placeDep ROOT log-symbols@4.1.0 OK for: mocha@10.4.0 want: 4.1.0
+68 silly placeDep ROOT minimatch@5.0.1 OK for: mocha@10.4.0 want: 5.0.1
+69 silly placeDep node_modules/mocha ms@2.1.3 OK for: mocha@10.4.0 want: 2.1.3
+70 silly placeDep ROOT serialize-javascript@6.0.0 OK for: mocha@10.4.0 want: 6.0.0
+71 silly placeDep ROOT strip-json-comments@3.1.1 OK for: mocha@10.4.0 want: 3.1.1
+72 silly placeDep ROOT supports-color@8.1.1 OK for: mocha@10.4.0 want: 8.1.1
+73 silly placeDep ROOT workerpool@6.2.1 OK for: mocha@10.4.0 want: 6.2.1
+74 silly placeDep ROOT yargs@16.2.0 OK for: mocha@10.4.0 want: 16.2.0
+75 silly placeDep ROOT yargs-parser@20.2.4 OK for: mocha@10.4.0 want: 20.2.4
+76 silly placeDep ROOT yargs-unparser@2.0.0 OK for: mocha@10.4.0 want: 2.0.0
+77 silly fetch manifest anymatch@~3.1.2
+78 silly fetch manifest braces@~3.0.2
+79 silly fetch manifest glob-parent@~5.1.2
+80 silly fetch manifest is-binary-path@~2.1.0
+81 silly fetch manifest is-glob@~4.0.1
+82 silly fetch manifest normalize-path@~3.0.0
+83 silly fetch manifest readdirp@~3.6.0
+84 silly fetch manifest fsevents@~2.3.2
+85 silly fetch manifest ms@2.1.2
+86 silly fetch manifest locate-path@^6.0.0
+87 silly fetch manifest path-exists@^4.0.0
+88 silly fetch manifest fs.realpath@^1.0.0
+89 silly fetch manifest inflight@^1.0.4
+90 silly fetch manifest minimatch@^5.0.1
+91 silly fetch manifest argparse@^2.0.1
+92 silly fetch manifest chalk@^4.1.0
+93 silly fetch manifest is-unicode-supported@^0.1.0
+94 http fetch GET 200 https://registry.npmjs.org/anymatch 159ms (cache miss)
+95 silly fetch manifest brace-expansion@^2.0.1
+96 http fetch GET 200 https://registry.npmjs.org/is-binary-path 176ms (cache miss)
+97 silly fetch manifest randombytes@^2.1.0
+98 http fetch GET 200 https://registry.npmjs.org/inflight 170ms (cache miss)
+99 silly fetch manifest has-flag@^4.0.0
+100 http fetch GET 200 https://registry.npmjs.org/locate-path 183ms (cache miss)
+101 silly fetch manifest cliui@^7.0.2
+102 http fetch GET 200 https://registry.npmjs.org/fs.realpath 182ms (cache miss)
+103 silly fetch manifest escalade@^3.1.1
+104 http fetch GET 200 https://registry.npmjs.org/path-exists 184ms (cache miss)
+105 silly fetch manifest get-caller-file@^2.0.5
+106 http fetch GET 200 https://registry.npmjs.org/is-glob 268ms (cache miss)
+107 silly fetch manifest require-directory@^2.1.1
+108 http fetch GET 200 https://registry.npmjs.org/argparse 260ms (cache miss)
+109 silly fetch manifest string-width@^4.2.0
+110 http fetch GET 200 https://registry.npmjs.org/is-unicode-supported 256ms (cache miss)
+111 silly fetch manifest y18n@^5.0.5
+112 http fetch GET 200 https://registry.npmjs.org/braces 276ms (cache miss)
+113 silly fetch manifest yargs-parser@^20.2.2
+114 silly fetch manifest camelcase@^6.0.0
+115 http fetch GET 200 https://registry.npmjs.org/glob-parent 278ms (cache miss)
+116 silly fetch manifest decamelize@^4.0.0
+117 http fetch GET 200 https://registry.npmjs.org/readdirp 292ms (cache miss)
+118 silly fetch manifest flat@^5.0.2
+119 http fetch GET 200 https://registry.npmjs.org/randombytes 167ms (cache miss)
+120 silly fetch manifest is-plain-obj@^2.1.0
+121 http fetch GET 200 https://registry.npmjs.org/get-caller-file 184ms (cache miss)
+122 http fetch GET 200 https://registry.npmjs.org/has-flag 197ms (cache miss)
+123 http fetch GET 200 https://registry.npmjs.org/require-directory 125ms (cache miss)
+124 http fetch GET 200 https://registry.npmjs.org/escalade 205ms (cache miss)
+125 http fetch GET 200 https://registry.npmjs.org/chalk 390ms (cache miss)
+126 http fetch GET 200 https://registry.npmjs.org/fsevents 407ms (cache miss)
+127 http fetch GET 200 https://registry.npmjs.org/cliui 229ms (cache miss)
+128 http fetch GET 200 https://registry.npmjs.org/brace-expansion 262ms (cache miss)
+129 http fetch GET 200 https://registry.npmjs.org/flat 203ms (cache miss)
+130 http fetch GET 200 https://registry.npmjs.org/camelcase 268ms (cache miss)
+131 http fetch GET 200 https://registry.npmjs.org/decamelize 268ms (cache miss)
+132 http fetch GET 200 https://registry.npmjs.org/y18n 283ms (cache miss)
+133 http fetch GET 200 https://registry.npmjs.org/string-width 286ms (cache miss)
+134 http fetch GET 200 https://registry.npmjs.org/normalize-path 557ms (cache miss)
+135 http fetch GET 200 https://registry.npmjs.org/is-plain-obj 214ms (cache miss)
+136 silly placeDep ROOT anymatch@3.1.3 OK for: chokidar@3.5.3 want: ~3.1.2
+137 silly placeDep ROOT braces@3.0.3 OK for: chokidar@3.5.3 want: ~3.0.2
+138 silly placeDep ROOT fsevents@2.3.3 OK for: chokidar@3.5.3 want: ~2.3.2
+139 silly placeDep ROOT glob-parent@5.1.2 OK for: chokidar@3.5.3 want: ~5.1.2
+140 silly placeDep ROOT is-binary-path@2.1.0 OK for: chokidar@3.5.3 want: ~2.1.0
+141 silly placeDep ROOT is-glob@4.0.3 OK for: chokidar@3.5.3 want: ~4.0.1
+142 silly placeDep ROOT normalize-path@3.0.0 OK for: chokidar@3.5.3 want: ~3.0.0
+143 silly placeDep ROOT readdirp@3.6.0 OK for: chokidar@3.5.3 want: ~3.6.0
+144 silly fetch manifest normalize-path@^3.0.0
+145 silly fetch manifest picomatch@^2.0.4
+146 silly fetch manifest fill-range@^7.1.1
+147 silly fetch manifest is-glob@^4.0.1
+148 silly fetch manifest binary-extensions@^2.0.0
+149 silly fetch manifest is-extglob@^2.1.1
+150 silly fetch manifest picomatch@^2.2.1
+151 http fetch GET 200 https://registry.npmjs.org/is-extglob 119ms (cache miss)
+152 http fetch GET 200 https://registry.npmjs.org/binary-extensions 228ms (cache miss)
+153 http fetch GET 200 https://registry.npmjs.org/fill-range 255ms (cache miss)
+154 http fetch GET 200 https://registry.npmjs.org/picomatch 255ms (cache miss)
+155 http fetch GET 200 https://registry.npmjs.org/picomatch 275ms (cache miss)
+156 silly placeDep ROOT picomatch@2.3.1 OK for: anymatch@3.1.3 want: ^2.0.4
+157 silly placeDep ROOT fill-range@7.1.1 OK for: braces@3.0.3 want: ^7.1.1
+158 silly fetch manifest to-regex-range@^5.0.1
+159 http fetch GET 200 https://registry.npmjs.org/to-regex-range 273ms (cache miss)
+160 silly placeDep ROOT to-regex-range@5.0.1 OK for: fill-range@7.1.1 want: ^5.0.1
+161 silly fetch manifest is-number@^7.0.0
+162 http fetch GET 200 https://registry.npmjs.org/is-number 134ms (cache miss)
+163 silly placeDep ROOT locate-path@6.0.0 OK for: find-up@5.0.0 want: ^6.0.0
+164 silly placeDep ROOT path-exists@4.0.0 OK for: find-up@5.0.0 want: ^4.0.0
+165 silly fetch manifest p-locate@^5.0.0
+166 http fetch GET 200 https://registry.npmjs.org/p-locate 149ms (cache miss)
+167 silly placeDep ROOT fs.realpath@1.0.0 OK for: glob@8.1.0 want: ^1.0.0
+168 silly placeDep ROOT inflight@1.0.6 OK for: glob@8.1.0 want: ^1.0.4
+169 silly placeDep ROOT binary-extensions@2.3.0 OK for: is-binary-path@2.1.0 want: ^2.0.0
+170 silly placeDep ROOT is-extglob@2.1.1 OK for: is-glob@4.0.3 want: ^2.1.1
+171 silly placeDep ROOT argparse@2.0.1 OK for: js-yaml@4.1.0 want: ^2.0.1
+172 silly placeDep ROOT p-locate@5.0.0 OK for: locate-path@6.0.0 want: ^5.0.0
+173 silly fetch manifest p-limit@^3.0.2
+174 http fetch GET 200 https://registry.npmjs.org/p-limit 149ms (cache miss)
+175 silly placeDep ROOT chalk@4.1.2 OK for: log-symbols@4.1.0 want: ^4.1.0
+176 silly placeDep ROOT is-unicode-supported@0.1.0 OK for: log-symbols@4.1.0 want: ^0.1.0
+177 silly fetch manifest ansi-styles@^4.1.0
+178 silly fetch manifest supports-color@^7.1.0
+179 http fetch GET 200 https://registry.npmjs.org/ansi-styles 1083ms (cache miss)
+180 silly placeDep ROOT ansi-styles@4.3.0 OK for: chalk@4.1.2 want: ^4.1.0
+181 silly placeDep node_modules/chalk supports-color@7.2.0 OK for: chalk@4.1.2 want: ^7.1.0
+182 silly fetch manifest color-convert@^2.0.1
+183 http fetch GET 200 https://registry.npmjs.org/color-convert 164ms (cache miss)
+184 silly placeDep ROOT color-convert@2.0.1 OK for: ansi-styles@4.3.0 want: ^2.0.1
+185 silly fetch manifest color-name@~1.1.4
+186 http fetch GET 200 https://registry.npmjs.org/color-name 107ms (cache miss)
+187 silly placeDep ROOT color-name@1.1.4 OK for: color-convert@2.0.1 want: ~1.1.4
+188 silly placeDep ROOT brace-expansion@2.0.1 OK for: minimatch@5.0.1 want: ^2.0.1
+189 silly fetch manifest balanced-match@^1.0.0

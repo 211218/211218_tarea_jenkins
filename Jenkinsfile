@@ -6,22 +6,27 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/211218/211218_tarea_jenkins.git/', branch: 'master'
-            }
-        }
         stage('Build') {
             steps {
                 script {
-                    sh "sudo docker build -t ${env.DOCKER_IMAGE}:${env.BUILD_ID} ."
+                    docker.build(DOCKER_IMAGE)
                 }
             }
         }
-        stage('Run') {
+        stage('Test') {
             steps {
                 script {
-                    sh "sudo docker run -d -p 3000:3000 ${env.DOCKER_IMAGE}:${env.BUILD_ID}"
+                    docker.image(DOCKER_IMAGE).inside {
+                        sh 'npm install'
+                        sh 'npm test'
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    docker.image(DOCKER_IMAGE).run('-d -p 3000:3000')
                 }
             }
         }
