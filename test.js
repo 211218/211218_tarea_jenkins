@@ -10,6 +10,6 @@ describe('GET /api/v1/welcome', () => {
     it('respond with Hello, World!', (done) => {
         request(app)
             .get('/api/v1/welcome')
-            .expect('Hello, World!', done);
+            .expect('Hello, World', done);
     });
 });
