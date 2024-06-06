@@ -9,7 +9,9 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build(DOCKER_IMAGE)
+                    docker.withServer('tcp://localhost:2375') {
+                        docker.build(DOCKER_IMAGE)
+                    }
                 }
             }
         }
