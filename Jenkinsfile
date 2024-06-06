@@ -1,39 +1,60 @@
 pipeline {
     agent any
-
-    environment {
-        DOCKER_IMAGE = 'node-hello-world'
-    }
-
     stages {
-        stage('Build') {
+        stage('Check Docker') {
             steps {
                 script {
-                    docker.build(DOCKER_IMAGE)
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                script {
-                    docker.image(DOCKER_IMAGE).inside {
-                        sh 'npm install'
-                        sh 'chmod +x ./node_modules/.bin/mocha'
-                        sh 'npm run test'
+                    try {
+                        // sh 'sudo systemctl start docker'
+                        // sh 'sudo systemctl enable docker'
+                        sh 'docker --version'
+                    } catch (Exception e) {
+                        error "Docker is not running or not installed"
                     }
                 }
             }
         }
-        stage('Deploy') {
+        stage('Check Repository') {
             steps {
                 script {
-                    withEnv(["PATH+DOCKER=/usr/bin"]) { // Ajustar el PATH si es necesario
-                        sh 'docker --version' // Verificar que Docker esté disponible
-                        docker.image(DOCKER_IMAGE).run('docker run -d -p 3000:3000 --name node-hello-world node-hello-world:latest') // Correr el contenedor
-                        sh 'docker ps -a' // Verificar que el contenedor esté corriendo
-                    }
+                    echo 'Cloning...'
+                    sh 'git pull https://github.com/211218/211218_tarea_jenkins.git'
                 }
             }
+        }
+        stage('Build and Test') {
+            steps {
+                script {
+                    def imageId = sh(script: 'docker images -q soa-deploy:latest', returnStdout: true).trim()
+                    if (imageId != "") {
+                        def containerId = sh(script: 'docker ps -q -f name=soa-deploy-test', returnStdout: true).trim()
+                        if (containerId != "") {
+                            sh "docker stop soa-deploy-test"
+                            sh "docker rm soa-deploy-test"
+                            sh "docker rmi soa-deploy:latest"
+                        } else {
+                            sh "docker rmi soa-deploy:latest"
+                        }
+                    }
+                    echo 'Building Docker image and running tests...'
+                    sh "docker build -t soa-deploy:latest ."
+                }
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                def containerRunning = sh(script: 'docker ps -q -f name=soa-deploy-test', returnStdout: true).trim()
+                if (containerRunning) {
+                    sh "docker stop soa-deploy-test"
+                    sh "docker rm soa-deploy-test"
+                }
+                sh "docker run -d -p 3000:3000 --name soa-deploy-test soa-deploy:latest"
+            }
+        }
+        failure {
+            echo 'Build or tests failed. No deployment will be done.'
         }
     }
 }
