@@ -7,8 +7,8 @@
 6 silly config:load:file:C:\Users\andro\AppData\Roaming\npm\etc\npmrc
 7 verbose title npm test
 8 verbose argv "test"
-9 verbose logfile logs-max:10 dir:C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T07_25_37_615Z-
-10 verbose logfile C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T07_25_37_615Z-debug-0.log
+9 verbose logfile logs-max:10 dir:C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T08_48_12_526Z-
+10 verbose logfile C:\Users\andro\Documents\BACKEND_NODEJS\npm-cache\_logs\2024-06-06T08_48_12_526Z-debug-0.log
 11 silly logfile start cleaning logs, removing 2 files
 12 silly logfile done cleaning log files
 13 verbose exit 0
