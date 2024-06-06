@@ -18,7 +18,7 @@ pipeline {
                 script {
                     docker.image(DOCKER_IMAGE).inside {
                         sh 'npm install'
-                        sh 'chmod +x ./node_modules/.bin/mocha'  // Agrega esta línea para otorgar permisos
+                        sh 'chmod +x ./node_modules/.bin/mocha'
                         sh 'npm run test'
                     }
                 }
@@ -27,7 +27,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.image(DOCKER_IMAGE).run('-d', '-p', '3000:3000')
+                    withEnv(["PATH+DOCKER=/usr/bin"]) { // Ajustar el PATH si es necesario
+                        sh 'docker --version' // Verificar que Docker esté disponible
+                        docker.image(DOCKER_IMAGE).run('-d -p 3000:3000 --name node-hello-world')
+                        sh 'docker ps -a' // Verificar que el contenedor esté corriendo
+                    }
                 }
             }
         }
