@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Otorgar permisos de ejecución a mocha
+# Otorgar permisos de ejecución a mochaa
 RUN chmod +x ./node_modules/.bin/mocha
 
 COPY . .
