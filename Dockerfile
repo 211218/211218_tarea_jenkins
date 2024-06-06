@@ -10,4 +10,4 @@ RUN mkdir -p /.npm && chown -R 995:993 /.npm
 COPY . .
 
 EXPOSE 3000
-CMD ["node", "app.js"]
+CMD ["node", "test.js"]
