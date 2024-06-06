@@ -47,15 +47,18 @@ pipeline {
     }
 
     post {
-        success {
+        always {
             script {
-                // Detener y eliminar cualquier contenedor en ejecución con el mismo nombres
+                // Detener y eliminar cualquier contenedor en ejecución con el mismo nombre
                 def containerRunning = sh(script: 'docker ps -q -f name=soa-deploy-test', returnStdout: true).trim()
                 if (containerRunning != "") {
                     sh "docker stop $containerRunning"
                     sh "docker rm $containerRunning"
                 }
-
+            }
+        }
+        success {
+            script {
                 // Desplegar el nuevo contenedor
                 sh "docker run -d -p 3000:3000 --name soa-deploy-test soa-deploy:latest"
 
