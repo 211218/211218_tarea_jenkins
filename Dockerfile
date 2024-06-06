@@ -8,4 +8,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
+RUN chmod +x /path/to/mocha
 CMD ["node", "app.js"]

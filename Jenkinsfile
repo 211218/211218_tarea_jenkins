@@ -18,7 +18,6 @@ pipeline {
                 script {
                     docker.image(DOCKER_IMAGE).inside {
                         sh 'npm install'
-                        sh 'sudo chmod +x /home/ec2-user/new/211218_tarea_jenkins/node_modules/.bin/mocha'
                         sh 'npm test'
                     }
                 }
