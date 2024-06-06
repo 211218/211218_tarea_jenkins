@@ -27,7 +27,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.image(DOCKER_IMAGE).run('-p 3000:3000')
+                    def container = docker.image(DOCKER_IMAGE).run('-d -p 3000:3000')
+                    echo "Container ID: ${container.id}"
                 }
             }
         }
